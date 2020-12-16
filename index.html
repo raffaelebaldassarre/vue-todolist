@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vue-todolist</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"/>
 </head>
 <body>
     <div id="app">
-        
+        <img :src="logoBoolean" style="width:300px;" alt="">
+        <h2>To Do List</h2>
+        <input type="text" name="task" id="task" v-model="task" placeholder="Type your To Do List">
+        <button @click="addTask">Add</button>
+        <ul v-if="tasks.length > 0">
+            <li v-for="(task, index) in tasks">{{task}}<i class="fas fa-times" @click="removeTask(index)"></i></li>
+        </ul>
+        <p v-else>Nothing To Do!</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="./assets/js/main.js"></script>
