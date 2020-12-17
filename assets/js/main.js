@@ -16,7 +16,10 @@ let app = new Vue ({
     },      
     methods : {
         addTask(){
+        if (this.task.length>= 3){
             this.tasks.push(this.task);
+            this.task = "";
+            }
         },
         removeTask(index){
             this.tasks.splice(index, 1);
