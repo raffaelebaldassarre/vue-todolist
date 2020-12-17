@@ -11,7 +11,7 @@ let app = new Vue ({
         document.addEventListener("keyup", (e) => {
           if (e.key === "Enter") {
             this.addTask();
-          }
+          };
         });
     },      
     methods : {
@@ -19,10 +19,13 @@ let app = new Vue ({
         if (this.task.length>= 3){
             this.tasks.push(this.task);
             this.task = "";
-            }
+            };
         },
         removeTask(index){
             this.tasks.splice(index, 1);
+        },
+        removeAllTask(index){
+            this.tasks.splice(index);
         }
     }
 });

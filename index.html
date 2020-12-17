@@ -8,15 +8,18 @@
     <link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"/>
 </head>
 <body>
-    <div id="app">
-        <img :src="logoBoolean" style="width:300px;" alt="">
-        <h2>To Do List</h2>
+    <div id="app" class="flex-container">
+        <img class="logo pt-50" :src="logoBoolean" style="width:300px;" alt="">
+        <h2 class="pt-20">To Do List</h2>
+        <div class="input pt-20">
         <input type="text" name="task" id="task" v-model="task" placeholder="Type your To Do List">
-        <button @click="addTask">Add</button>
+        <button class="cursorP" @click="addTask">Add</button>
+        </div>
         <ul v-if="tasks.length > 0">
-            <li v-for="(task, index) in tasks">{{task}}<i class="fas fa-times" @click="removeTask(index)"></i></li>
+            <li v-for="(task, index) in tasks">{{task}} <i class="fas fa-times cursorP" @click="removeTask(index)"></i></li>
+            <p class="pt-20"></li><i class="removeAll cursorP" @click="removeAllTask(index)">Remove All List</i></p>
         </ul>
-        <p v-else>Nothing To Do!</p>
+        <p class="pt-50" v-else>Nothing To Do!</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="./assets/js/main.js"></script>

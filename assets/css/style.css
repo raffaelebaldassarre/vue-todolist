@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: turquoise;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    align-items: center;
+  }
+
+.pt-50{
+    padding-top: 50px;
+}
+
+.pt-20{
+    padding-top: 20px;
+}
+
+.task{
+    display: inline-block
+}
+
+li{
+    list-style: decimal;
+}
+
+.removeAll{
+    font-style: unset;
+    font-weight: bold;
+}
+
+.cursorP{
+    cursor: pointer;
+}
