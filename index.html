@@ -12,7 +12,7 @@
         <img class="logo pt-50" :src="logoBoolean" style="width:300px;" alt="">
         <h2 class="pt-20">To Do List</h2>
         <div class="input pt-20">
-        <input type="text" name="task" id="task" v-model="task" placeholder="Type your To Do List">
+        <input type="text" name="task" id="task" v-model="task" placeholder="Type your To Do List" v-on:keyup.enter="addTask">
         <button class="cursorP" @click="addTask">Add</button>
         </div>
         <ul v-if="tasks.length > 0">

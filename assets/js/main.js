@@ -6,14 +6,14 @@ let app = new Vue ({
         tasks: [
 
         ]
-    },
+    }/* ,
     created() {
         document.addEventListener("keyup", (e) => {
           if (e.key === "Enter") {
             this.addTask();
           };
         });
-    },      
+    } */,      
     methods : {
         addTask(){
         if (this.task.length>= 3){
